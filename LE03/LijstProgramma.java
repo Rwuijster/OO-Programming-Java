@@ -9,9 +9,11 @@ public class LijstProgramma {
     machine.zetAan();
     
     ArrayList<Partij> partijlijst = machine.getPartijen();
-    Partij laatstePartij = partijlijst.get(2);
+    int lijstLengte = partijlijst.size();
+    Partij laatstePartij = partijlijst.get(lijstLengte - 1);
     ArrayList<Kandidaat> kandidaatLijst = laatstePartij.getKandidaten();
-    Kandidaat laatsteKandidaat = kandidaatLijst.get(4);
+    int lengteKandidaatLijst = kandidaatLijst.size();
+    Kandidaat laatsteKandidaat = kandidaatLijst.get(lengteKandidaatLijst - 1);
     
     System.out.println("De laatste Partij is: " + laatstePartij.getNaam());
     System.out.println("De laatste kandidaat is: " + laatsteKandidaat.getNaam());
